@@ -23,7 +23,7 @@ const service = {
         { email: req.body.email },
         { $set: { verifyToken } }
       );
-      const link = `http://localhost:3001/users/verify?token=${verifyToken}`;
+      const link = `https://surjith-crm-app.herokuapp.com/users/verify?token=${verifyToken}`;
       await sendEmail(
         req.body.email,
         "Verify email",
@@ -128,7 +128,7 @@ const service = {
         { email: user.email },
         { $set: { resetToken } }
       );
-      const link = `http://localhost:3001/users/reset-password/${resetToken}`;
+      const link = `https://surjith-crm-app.herokuapp.com/users/reset-password/${resetToken}`;
       await sendEmail(
         user.email,
         "Forgot password",
