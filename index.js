@@ -19,7 +19,7 @@ const app = express();
     app.use(
       cors({
         origin: [
-          "http://localhost:3000",
+          "https://surjith-crm-app.netlify.app",
           "https://surjith-crm-app.herokuapp.com",
         ],
       })
