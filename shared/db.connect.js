@@ -1,7 +1,7 @@
 const { MongoClient, ConnectionCheckedInEvent } = require("mongodb");
+const env = require("dotenv").config();
 
-const DB_URL =
-  "mongodb+srv://mongo:mongo123@cluster0.at9xbmp.mongodb.net/crmapp";
+const DB_URL = process.env.DB;
 const DB_NAME = "crmapp";
 
 const client = new MongoClient(DB_URL);
