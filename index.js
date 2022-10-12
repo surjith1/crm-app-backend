@@ -33,6 +33,10 @@ const app = express();
     app.use("/leads", leadRoutes);
     app.use("/requests", serviceRequestsRoutes);
 
+    app.get("/", (req, res) => {
+      res.send("WElcome to the CRM App");
+    });
+
     app.listen(process.env.PORT || 3001);
     console.log("Started and running");
   } catch (err) {
